@@ -14,6 +14,8 @@ export class PonyComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+     this.subscription = this.colorService.get()
+      .subscribe(color => this.color = color);
   }
   check() {
     console.log('pony component view checked');
