@@ -19,14 +19,5 @@ export class RaceComponent implements OnInit {
     console.log('race component view checked');
   }
 
-  changeColor() { 
-    // ici on change la propriété d'un object du tableau ponies la référence mémoire reste la meme 
-    //this.ponies[0].color = this.randomColor(0, //this.colors.length - 1);
-
-// solution 
-    const pony = this.ponies[0];
-  // create a new pony with the old attributes and the new color
-  this.ponies[0] = { ...pony, color: this.colorService.get() };
-  } 
 
 }
