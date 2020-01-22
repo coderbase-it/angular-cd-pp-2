@@ -1,4 +1,5 @@
 import { Component, OnInit,ChangeDetectionStrategy } from '@angular/core';
+import { ColorService} from '../color.service';
 
 @Component({
   selector: 'app-race', 
@@ -9,7 +10,7 @@ import { Component, OnInit,ChangeDetectionStrategy } from '@angular/core';
 export class RaceComponent implements OnInit {
   ponies = [{ id: 1, color: 'green' }, { id: 2, color: 'blue' }];
 
-  constructor() { }
+  constructor(private colorService: ColorService) { }
 
   ngOnInit() {
   }
@@ -25,7 +26,7 @@ export class RaceComponent implements OnInit {
 // solution 
     const pony = this.ponies[0];
   // create a new pony with the old attributes and the new color
-  this.ponies[0] = { ...pony, color: this.randomColor(0, this.colors.length - 1) };
+  this.ponies[0] = { ...pony, color: this.colorService.get() };
   } 
 
 }

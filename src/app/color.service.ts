@@ -7,7 +7,7 @@ export class ColorService {
 
  
   randomColor() {
-   
+    
    const max = Math.floor(this.colors.length - 1);
     return this.colors[Math.floor(Math.random() * (max  + 1)) ];
 

@@ -1,4 +1,3 @@
 <p>{{ check() }}</p>
-    <app-pony-image [src]="getPonyImageUrl()">
-
-    </app-pony-image>
+ <p>New color every 1s</p>
+      <img  *ngIf="color | async as c" [src]="'https://cdn.jsdelivr.net/gh/coderbase-it/angular-cd-pp@master/src/assets/images/pony-' + c + '-running.gif'">
